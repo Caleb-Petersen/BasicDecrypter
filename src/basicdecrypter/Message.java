@@ -20,7 +20,8 @@ public class Message {
     public void getCipherMessage() {
         this.codedMessage = "";
         
-        System.out.println("Please enter your cipher text you want to be decrypted.");
+        System.out.println("Please enter your cipher text you want to be decrypted. A reasonably large \n"
+                + "sample size may be required to get good data\n");
         Scanner in = new Scanner(System.in);
         this.codedMessage = in.nextLine().toLowerCase();
         

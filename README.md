@@ -33,16 +33,6 @@ x corresponds to q with frequency 0.1786777843954735
 q corresponds to j with frequency 0.1786777843954735
 z corresponds to z with frequency 0.05955926146515784
 
-This would be invaluable to someone trying to decrypt by hand and occur, and it takes a fraction
-of a second to run, however it is not enough for automated decryption where the encrypted message
-is an exact replica of the original message. In fact, if one were to just use that the output would 
-likely be a mess of characters that don't really resemble any words. 
-
-Thus another approach needs to be added. Using the frequency table (see above) that the program can 
-generate, it is possible to create an algorithm that computes the probability of a given message letter
-matching with any given alphabet letter. The change in frequency (|frequency(messageLetter) - frequency(alphabetLetter)|)
-is the key component, though the algorithm could take into consideration other variables as well. Given 
-that probability distribution, and using some constant threshold value, the program can run through the 
-first few letters of the encrypted message using high-probability letters, and see what words can be formed.
-Once you have a set of words using say, 15 letters, then it is possible to guarantee which actual letter matches
-with which message letter, and the decryption process from then on is much quicker.
+This should be enough to try a few combinations of probable letters and quickly see if it will 
+be possible to decrypt the cipher text. Of course if the text was not encrypted using the alias
+method then it will not be possible to decrypt the text. 

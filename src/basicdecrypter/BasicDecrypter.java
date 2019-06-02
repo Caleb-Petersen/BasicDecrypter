@@ -67,6 +67,9 @@ public class BasicDecrypter {
             System.out.println(Character.toString(messageCharacters.get(i).MessageCharacter) + " corresponds to " + Character.toString(messageCharacters.get(i).ActualCharacter) + " with frequency " + frequency);
         }
 
+        System.out.println("\nPlease note that if the text entered was not encrypted using the \n"
+                + "alias method or if the sample size of text is too small then \n"
+                + "these statistics will not be meaningful");
     }
     
     public static boolean charAlreadyAdded(char c, ArrayList<MessageCharacter> messageCharacters) {
